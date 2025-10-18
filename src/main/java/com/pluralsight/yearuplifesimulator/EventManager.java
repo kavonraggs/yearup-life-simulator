@@ -84,10 +84,19 @@ public class EventManager {
     }
 
 
-//
-//    public LifeEvent getRandomEvent(){
-//
-//
-//    }
+
+    public LifeEvent getRandomEvent(int diceTotal){
+        if (diceTotal <= 4) {
+            return badEvents.get(random.nextInt(badEvents.size()));
+        } else if (diceTotal <= 6) {
+            return neutralEvents.get(random.nextInt(neutralEvents.size()));
+
+        } else if (diceTotal == 7 || diceTotal == 11){
+            return luckyEvents.get(random.nextInt(luckyEvents.size()));
+        }else {
+            return goodEvents.get(random.nextInt(goodEvents.size()));
+
+        }
+    }
 
 }
