@@ -1,0 +1,49 @@
+{
+  "bad": [
+    { "vendor": "The Grand Apartments", "description": "Rent Due", "amount": -1200, "type": "PAYMENT", "message": "It's the 1st...again." },
+    { "vendor": "Electric Company", "description": "Electric bill due", "amount": -120, "type": "PAYMENT", "message": "That A/C had you living nice, but now it’s time to pay." },
+    { "vendor": "Triple A", "description": "Ran out of gas call AAA", "amount": -99, "type": "PAYMENT", "message": "You forgot to get gas before your Monday morning commute... AAA to the rescue." },
+    { "vendor": "Walmart", "description": "Groceries", "amount": -150, "type": "PAYMENT", "message": "Grocery prices got you in a chokehold." },
+    { "vendor": "Valero", "description": "Gas fill up", "amount": -45, "type": "PAYMENT", "message": "The tank might be full, but your wallet? Nope." },
+    { "vendor": "Discount Tire", "description": "Flat tire repair", "amount": -120, "type": "PAYMENT", "message": "Hit another pothole? That’s another $120 gone." },
+    { "vendor": "T-Mobile", "description": "Phone bill", "amount": -99, "type": "PAYMENT", "message": "All the talking, texting, and TikToking finally caught up to you." },
+    { "vendor": "DoorDash", "description": "Late night cravings", "amount": -36, "type": "PAYMENT", "message": "Could’ve cooked, but nah. Enjoy your $36 nuggets, fries, and a drink." },
+    { "vendor": "Cousin Ray", "description": "Loaned money", "amount": -15, "type": "PAYMENT", "message": "Cousin swore he’d pay you back next week… sure." },
+    { "vendor": "Bad Luck", "description": "Lost wallet (⅓ of all cash lost)", "amount": -0.33, "type": "PAYMENT", "message": "You lost your wallet! A chunk of your cash is gone." }
+  ],
+  "neutral": [
+    { "vendor": "Target", "description": "Target run", "amount": -35, "type": "PAYMENT", "message": "You went for toothpaste, left with a cart full of candles." },
+    { "vendor": "Karaoke Bar", "description": "Section 3 Hang out: Karaoke night", "amount": -24, "type": "PAYMENT", "message": "Vibes were high, but so was the bill." },
+    { "vendor": "Apple Music", "description": "Subscription", "amount": -10, "type": "PAYMENT", "message": "That playlist isn’t free, my friend." },
+    { "vendor": "Coffee Shop", "description": "Morning coffee before class", "amount": -10, "type": "PAYMENT", "message": "Just in time to log in at 8:30!" },
+    { "vendor": "DART", "description": "Parking for Year Up", "amount": -8, "type": "PAYMENT", "message": "Another day, another parking fee." },
+    { "vendor": "DART", "description": "Transit pass", "amount": -5, "type": "PAYMENT", "message": "At least you’re saving on gas!" },
+    { "vendor": "Chick-fil-A", "description": "Lunch", "amount": -18, "type": "PAYMENT", "message": "You swore you’d start meal prepping..." },
+    { "vendor": "7-Eleven", "description": "Snack and energy drink", "amount": -12, "type": "PAYMENT", "message": "Quick pick-me-up, but your wallet’s tired." },
+    { "vendor": "Walmart", "description": "Pens and notebooks", "amount": -15, "type": "PAYMENT", "message": "Supplies for class...kinda worth it...I guess." },
+    { "vendor": "Chipotle", "description": "Dinner on study day", "amount": -20, "type": "PAYMENT", "message": "Study fuel, burrito style." }
+  ],
+  "good": [
+    { "vendor": "LinkedIn", "description": "Recruiter referral bonus", "amount": 100, "type": "DEPOSIT", "message": "Referral bonus for referring your Year Up friend to a job! Good looks!" },
+    { "vendor": "Parents", "description": "‘Proud of you’ money", "amount": 75, "type": "DEPOSIT", "message": "Your parents sent some cash through Zelle with the message 'Proud of you.'" },
+    { "vendor": "Aunt Lisa", "description": "Birthday money", "amount": 50, "type": "DEPOSIT", "message": "Happy birthday! Auntie came through." },
+    { "vendor": "Amazon", "description": "Refund processed", "amount": 76, "type": "DEPOSIT", "message": "That refund finally cleared! Thank ya!" },
+    { "vendor": "CashApp", "description": "Payback from friend", "amount": 50, "type": "DEPOSIT", "message": "Your friend actually paid you back! Miracles exist." },
+    { "vendor": "Grandma", "description": "Secret $100 blessing", "amount": 100, "type": "DEPOSIT", "message": "Grandma secretly slid you a crisp hundred with love." },
+    { "vendor": "Year Up Classroom", "description": "Found $40 on floor", "amount": 40, "type": "DEPOSIT", "message": "You found $40 under a desk. Lunch on you!" },
+    { "vendor": "Freelance Client", "description": "Logo design", "amount": 200, "type": "DEPOSIT", "message": "Your design hustle paid off big time." },
+    { "vendor": "Sneaker Market", "description": "Sold old sneakers", "amount": 80, "type": "DEPOSIT", "message": "I know you'll miss them but look at all that green!" },
+    { "vendor": "Hackathon", "description": "2nd place prize", "amount": 250, "type": "DEPOSIT", "message": "You coded your way to the podium!" },
+    { "vendor": "Alumni Event", "description": "Donation from alumni", "amount": 50, "type": "DEPOSIT", "message": "An alum believed in your grind and blessed!" }
+  ],
+  "lucky": [
+    { "vendor": "Class Action Lawsuit", "description": "Settlement payout", "amount": 450, "type": "DEPOSIT", "message": "You didn’t even know you were in the lawsuit!" },
+    { "vendor": "Year Up", "description": "Performance bonus", "amount": 200, "type": "DEPOSIT", "message": "Excellence pays off...literally!" },
+    { "vendor": "Lottery Ticket", "description": "Scratch-off win", "amount": 2000, "type": "DEPOSIT", "message": "Instant millionaire vibes (well, kinda)." },
+    { "vendor": "IRS", "description": "Tax refund", "amount": 1000, "type": "DEPOSIT", "message": "The IRS finally came through finally! Time to go celebrate!" },
+    { "vendor": "401k", "description": "Forgotten account", "amount": 800, "type": "DEPOSIT", "message": "Your old job just made your day." },
+    { "vendor": "Instagram", "description": "Giveaway win", "amount": 500, "type": "DEPOSIT", "message": "Who knew those things really worked? It's your lucky day." },
+    { "vendor": "Apple Pay", "description": "Glitch refund", "amount": 50, "type": "DEPOSIT", "message": "Tech glitch in your favor...just don’t question it." },
+    { "vendor": "TikTok", "description": "Viral promo deal", "amount": 300, "type": "DEPOSIT", "message": "Your video went crazy, and so did your bag. Ka - Ching!" }
+  ]
+}
