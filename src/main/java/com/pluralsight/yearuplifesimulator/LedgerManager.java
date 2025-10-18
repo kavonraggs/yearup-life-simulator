@@ -12,18 +12,26 @@ public class LedgerManager {
     }
 
     public Transaction addPayment(String vendor, String description, double amount){
-        Transaction t = new Transaction(vendor, description, amount);
+        Transaction t = new Transaction(vendor, description, -Math.abs(amount));
         transactions.add(t);
         return t;
     }
 
-    public void getAllTransactions(){
-
+    public ArrayList<Transaction> getAllTransactions(){
+        return transactions;
     }
 
     public void printAllTransactions(){
-
+        if (transactions.isEmpty()){
+            System.out.println("No transactions yet. Keep playing to earn some dough!");
+        } else {
+            for (Transaction t: transactions){
+                System.out.println(t);
+            }
+        }
     }
 
-
+    public void resetLedger(){
+        transactions.clear();
+    }
 }

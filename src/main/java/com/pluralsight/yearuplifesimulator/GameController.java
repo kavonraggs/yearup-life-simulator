@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 
+import java.util.Random;
+
 public class GameController {
     @FXML
     private Label welcomeText;
@@ -23,6 +25,12 @@ public class GameController {
     @FXML
     private ImageView dice2;
 
+    @FXML
+    public void initialize(){
+        player = new Player(player.getName(), 0);
+        balanceLabel.setText("Balance: $" + player.getBalance());
+        eventLabel.setText("Welcome to Year Up Life Simulator!");
+    }
 
     @FXML
     protected void onRollDice() {
@@ -34,4 +42,8 @@ public class GameController {
 
     @FXML
     private void onViewLedger(){ System.out.println("View Ledger clicked"); }
+
+
+    private Player player;
+    private Random random = new Random();
 }
