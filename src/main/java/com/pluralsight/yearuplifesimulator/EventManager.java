@@ -1,5 +1,9 @@
 package com.pluralsight.yearuplifesimulator;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -13,13 +17,77 @@ public class EventManager {
     public EventManager(){
         random = new Random();
 
+        try (InputStream input = getClass().getResourceAsStream("events.json")){
+            if (input == null) {
+                throw new IllegalStateException("event.json not found");
+            }
+
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode root = mapper.readTree(input);
+            System.out.println("File loaded successfully");
+
+            JsonNode badArray = root.get("bad");
+            for (JsonNode node: badArray) {
+                String vendor = node.get("vendor").asText();
+                String description = node.get("description").asText();
+                double amount = node.get("amount").asDouble();
+                String typeString = node.get("type").asText();
+                String message = node.get("message").asText();
+
+                LifeEvent.EventType type = LifeEvent.EventType.valueOf(typeString.toUpperCase());
+                LifeEvent event = new LifeEvent(message, vendor, description, amount, type);
+                badEvents.add(event);
+            }
+
+            JsonNode neutralArray = root.get("neutral");
+            for (JsonNode node: neutralArray) {
+                String vendor = node.get("vendor").asText();
+                String description = node.get("description").asText();
+                double amount = node.get("amount").asDouble();
+                String typeString = node.get("type").asText();
+                String message = node.get("message").asText();
+
+                LifeEvent.EventType type = LifeEvent.EventType.valueOf(typeString.toUpperCase());
+                LifeEvent event = new LifeEvent(message, vendor, description, amount, type);
+                neutralEvents.add(event);
+            }
+
+            JsonNode goodArray = root.get("good");
+            for (JsonNode node: goodArray) {
+                String vendor = node.get("vendor").asText();
+                String description = node.get("description").asText();
+                double amount = node.get("amount").asDouble();
+                String typeString = node.get("type").asText();
+                String message = node.get("message").asText();
+
+                LifeEvent.EventType type = LifeEvent.EventType.valueOf(typeString.toUpperCase());
+                LifeEvent event = new LifeEvent(message, vendor, description, amount, type);
+                goodEvents.add(event);
+            }
+
+            JsonNode luckyArray = root.get("lucky");
+            for (JsonNode node: luckyArray) {
+                String vendor = node.get("vendor").asText();
+                String description = node.get("description").asText();
+                double amount = node.get("amount").asDouble();
+                String typeString = node.get("type").asText();
+                String message = node.get("message").asText();
+
+                LifeEvent.EventType type = LifeEvent.EventType.valueOf(typeString.toUpperCase());
+                LifeEvent event = new LifeEvent(message, vendor, description, amount, type);
+                luckyEvents.add(event);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
-
-    public LifeEvent getRandomEvent(){
-
-
-    }
+//
+//    public LifeEvent getRandomEvent(){
+//
+//
+//    }
 
 }

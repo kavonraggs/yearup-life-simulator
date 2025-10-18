@@ -16,7 +16,7 @@
     { "vendor": "Karaoke Bar", "description": "Section 3 Hang out: Karaoke night", "amount": -24, "type": "PAYMENT", "message": "Vibes were high, but so was the bill." },
     { "vendor": "Apple Music", "description": "Subscription", "amount": -10, "type": "PAYMENT", "message": "That playlist isn’t free, my friend." },
     { "vendor": "Coffee Shop", "description": "Morning coffee before class", "amount": -10, "type": "PAYMENT", "message": "Just in time to log in at 8:30!" },
-    { "vendor": "DART", "description": "Parking for Year Up", "amount": -8, "type": "PAYMENT", "message": "Another day, another parking fee." },
+    { "vendor": "Parking", "description": "Parking for Year Up", "amount": -8, "type": "PAYMENT", "message": "Another day, another parking fee." },
     { "vendor": "DART", "description": "Transit pass", "amount": -5, "type": "PAYMENT", "message": "At least you’re saving on gas!" },
     { "vendor": "Chick-fil-A", "description": "Lunch", "amount": -18, "type": "PAYMENT", "message": "You swore you’d start meal prepping..." },
     { "vendor": "7-Eleven", "description": "Snack and energy drink", "amount": -12, "type": "PAYMENT", "message": "Quick pick-me-up, but your wallet’s tired." },
@@ -26,7 +26,6 @@
   "good": [
     { "vendor": "LinkedIn", "description": "Recruiter referral bonus", "amount": 100, "type": "DEPOSIT", "message": "Referral bonus for referring your Year Up friend to a job! Good looks!" },
     { "vendor": "Parents", "description": "‘Proud of you’ money", "amount": 75, "type": "DEPOSIT", "message": "Your parents sent some cash through Zelle with the message 'Proud of you.'" },
-    { "vendor": "Aunt Lisa", "description": "Birthday money", "amount": 50, "type": "DEPOSIT", "message": "Happy birthday! Auntie came through." },
     { "vendor": "Amazon", "description": "Refund processed", "amount": 76, "type": "DEPOSIT", "message": "That refund finally cleared! Thank ya!" },
     { "vendor": "CashApp", "description": "Payback from friend", "amount": 50, "type": "DEPOSIT", "message": "Your friend actually paid you back! Miracles exist." },
     { "vendor": "Grandma", "description": "Secret $100 blessing", "amount": 100, "type": "DEPOSIT", "message": "Grandma secretly slid you a crisp hundred with love." },

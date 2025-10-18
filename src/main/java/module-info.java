@@ -9,6 +9,7 @@ module com.pluralsight.yearuplifesimulator {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
+    requires com.fasterxml.jackson.databind;
 
     opens com.pluralsight.yearuplifesimulator to javafx.fxml;
     exports com.pluralsight.yearuplifesimulator;

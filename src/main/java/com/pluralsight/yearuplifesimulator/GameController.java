@@ -33,6 +33,7 @@ public class GameController {
         player = new Player("Player1", 0);
         balanceLabel.setText("Balance: $" + player.getBalance());
         eventLabel.setText("Welcome to Year Up Life Simulator!");
+        EventManager manager = new EventManager();
     }
 
     @FXML
