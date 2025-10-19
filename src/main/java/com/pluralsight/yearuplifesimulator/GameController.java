@@ -10,6 +10,8 @@ import java.util.Random;
 public class GameController {
     private Player player;
     private Random random = new Random();
+    private EventManager manager = new EventManager();
+    private LifeEvent event;
 
     @FXML
     private Label welcomeText;
@@ -31,14 +33,26 @@ public class GameController {
     @FXML
     public void initialize(){
         player = new Player("Player1", 0);
-        balanceLabel.setText("Balance: $" + player.getBalance());
+        balanceLabel.setText("Current Balance: $" + player.getBalance());
         eventLabel.setText("Welcome to Year Up Life Simulator!");
-        EventManager manager = new EventManager();
     }
 
     @FXML
     protected void onRollDice() {
-        System.out.println("Roll button clicked");
+        int dice1 = random.nextInt(6) + 1;
+        int dice2 = random.nextInt(6) + 1;
+        int diceTotal = dice1 + dice2;
+
+
+
+        event = manager.getRandomEvent(diceTotal);
+        eventLabel.setText(event.getMessage());
+        if (event.getType() == LifeEvent.EventType.DEPOSIT) {
+            player.deposit(event.getVendor(), event.getDescription(), event.getAmount());
+        } else {
+            player.spend(event.getVendor(), event.getDescription(), event.getAmount());
+        }
+        balanceLabel.setText("Current Balance: $" + player.getBalance());
     }
 
     @FXML
@@ -46,7 +60,5 @@ public class GameController {
 
     @FXML
     private void onViewLedger(){ System.out.println("View Ledger clicked"); }
-
-
 
 }
