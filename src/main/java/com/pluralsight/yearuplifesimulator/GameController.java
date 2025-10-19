@@ -89,13 +89,13 @@ public class GameController {
             isLucky = true;
             player.deposit(event.getVendor(), event.getDescription(), event.getAmount());
 
-        } else if (choice == 1 && newTotal < 7) {
+        } else if (choice == 1 && newTotal < 6) {
             message = "Where my girls at?! You guessed correctly!";
             isLucky = true;
             player.deposit(event.getVendor(), event.getDescription(), event.getAmount());
 
         } else {
-            eventLabel.setText("You didn't win anything this time. Sorry pal!");
+            isLucky = false;
            message = "You woke up and it was just a dream! No money for you this time.";
         }
 
@@ -139,9 +139,10 @@ public class GameController {
 
                 resultLabel.setVisible(true);
                 handleLuckyRoll(diceTotal);
-                System.out.println(isLucky);
                 if (isLucky){
                 eventLabel.setText(fullMessage);
+                } else {
+                    eventLabel.setText("You didn't win anything this time. Sorry pal!");
                 }
             });
         } else {
@@ -170,6 +171,6 @@ public class GameController {
         resultLabel.setVisible(false); }
 
     @FXML
-    private void onViewLedger(){ System.out.println("View Ledger clicked"); }
+    private void onViewLedger(){ player.viewLedger(); }
 
 }
