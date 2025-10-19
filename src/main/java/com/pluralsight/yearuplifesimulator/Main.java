@@ -17,7 +17,7 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.sizeToScene();
         stage.show();
-        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/style.css")).toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("style.css")).toExternalForm());
     }
 
     public static void main(String[] args) { launch(args);

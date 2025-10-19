@@ -5,7 +5,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
+import java.awt.Color;
+import javax.swing.UIManager;
+import java.awt.Font;
 import javax.swing.*;
 import java.util.Objects;
 import java.util.Random;
@@ -33,11 +35,22 @@ public class GameController {
     @FXML
     private ImageView dice2View;
 
+    public GameController() {
+
+    }
+
+
     @FXML
     public void initialize(){
         player = new Player("Player1", 0);
         balanceLabel.setText("Current Balance: $" + player.getBalance());
         eventLabel.setText("Welcome to Year Up Life Simulator!");
+
+        String startFile = Objects.requireNonNull(getClass().getResource("/images/Dice1.png")).toExternalForm();
+        Image startImage = new Image(startFile);
+        dice1View.setImage(startImage);
+        dice2View.setImage(startImage);
+
     }
 
     public void handleLuckyRoll(int diceTotal){
