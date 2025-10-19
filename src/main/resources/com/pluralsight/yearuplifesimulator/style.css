@@ -19,7 +19,7 @@
     -fx-font-size: 20px;
     -fx-font-weight: 700;
     -fx-text-fill: #ffffff;
-    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-background-color: rgba(255,255,255,0.15);
     -fx-padding: 8 14;
     -fx-background-radius: 12;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 6, 0, 2, 2);

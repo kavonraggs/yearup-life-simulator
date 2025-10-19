@@ -5,6 +5,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+
 import java.awt.Color;
 import javax.swing.UIManager;
 import java.awt.Font;
@@ -13,6 +16,10 @@ import java.util.Objects;
 import java.util.Random;
 
 public class GameController {
+    public HBox diceBox;
+    public Label titleLabel;
+    public VBox statsBox;
+    public HBox buttonBox;
     private Player player;
     private final Random random = new Random();
     private final EventManager manager = new EventManager();
@@ -34,6 +41,9 @@ public class GameController {
     private ImageView dice1View;
     @FXML
     private ImageView dice2View;
+    @FXML
+    private Label resultLabel;
+
 
     public GameController() {
 
@@ -51,20 +61,24 @@ public class GameController {
         dice1View.setImage(startImage);
         dice2View.setImage(startImage);
 
+        resultLabel.setText("");
+
     }
 
     public void handleLuckyRoll(int diceTotal){
         String[] options = {"Over", "Under"};
 
         int choice = JOptionPane.showOptionDialog(null,
-                "You rolled a " + diceTotal + "! Pick whether your next roll will be over or under 6 and if you guess correctly, you'll get a very special surprise!",
-                "It's your lucky day!", 3, 3,
+                "You rolled a " + diceTotal + "! Pick whether your next roll will be over or under 6. If you guess correctly, you'll get a very special surprise!",
+                "It's your lucky day!", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,
                 null,
                 options,
-                null);
+                options[0]);
 
         int dice1 = random.nextInt(6) + 1;
         int dice2 = random.nextInt(6) + 1;
+        int newTotal = dice1 + dice2;
+
         String diceFile1 = Objects.requireNonNull(getClass().getResource("/images/Dice" + dice1 + ".png")).toExternalForm();
         String diceFile2 = Objects.requireNonNull(getClass().getResource("/images/Dice" + dice2 + ".png")).toExternalForm();
         Image diceImage1 = new Image(diceFile1);
@@ -72,19 +86,22 @@ public class GameController {
         dice1View.setImage(diceImage1);
         dice2View.setImage(diceImage2);
 
-        diceTotal = dice1 + dice2;
 
-        if (choice == 0 && diceTotal > 6) {
-            JOptionPane.showMessageDialog(null ,"Where my girls at?! You guessed correctly!");
+        String message;
+        if (choice == 0 && newTotal > 6) {
+            message = "Where my girls at?! You guessed correctly!";
             player.deposit(event.getVendor(), event.getDescription(), event.getAmount());
 
-        } else if (choice == 1 && diceTotal < 7) {
-            JOptionPane.showMessageDialog(null ,"Where my girls at?! You guessed correctly!");
+        } else if (choice == 1 && newTotal < 7) {
+            message = "Where my girls at?! You guessed correctly!";
             player.deposit(event.getVendor(), event.getDescription(), event.getAmount());
 
         } else {
-            JOptionPane.showMessageDialog(null,"You woke up and it was just a dream! No money for you this time.");
+           message = "You woke up and it was just a dream! No money for you this time.";
         }
+
+        resultLabel.setText(message);
+        balanceLabel.setText("Current Balance: $" + player.getBalance());
 
     }
 
@@ -101,8 +118,14 @@ public class GameController {
 
         int diceTotal = dice1 + dice2;
 
+
         event = manager.getRandomEvent(diceTotal);
-        eventLabel.setText(event.getMessage());
+
+        String vendor = event.getVendor();
+        double amount = event.getAmount();
+        String message = event.getMessage();
+        String fullMessage = message + "\nVendor: " + vendor + "\nAmount: " + String.format("$%.2f", amount);
+        eventLabel.setText(fullMessage);
 
 
 
