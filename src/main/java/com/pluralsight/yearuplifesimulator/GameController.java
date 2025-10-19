@@ -52,16 +52,16 @@ public class GameController {
 
     @FXML
     public void initialize(){
-        player = new Player("Player1", 0);
+        player = new Player("Player1", 2100);
         balanceLabel.setText("Current Balance: $" + player.getBalance());
-        eventLabel.setText("Welcome to Year Up Life Simulator!");
+        eventLabel.setText("Welcome! \nYou just received your first Year Up stipend.\nSpend it wisely!");
 
         String startFile = Objects.requireNonNull(getClass().getResource("/images/Dice1.png")).toExternalForm();
         Image startImage = new Image(startFile);
         dice1View.setImage(startImage);
         dice2View.setImage(startImage);
 
-        resultLabel.setText("");
+        resultLabel.setVisible(false);
 
     }
 
@@ -97,6 +97,7 @@ public class GameController {
             player.deposit(event.getVendor(), event.getDescription(), event.getAmount());
 
         } else {
+            eventLabel.setText("You didn't win anything this time. Sorry pal!");
            message = "You woke up and it was just a dream! No money for you this time.";
         }
 
@@ -130,8 +131,10 @@ public class GameController {
 
 
         if (diceTotal == 7 || diceTotal == 11) {
+            resultLabel.setVisible(true);
             handleLuckyRoll(diceTotal);
         } else {
+            resultLabel.setVisible(false);
             if (event.getType() == LifeEvent.EventType.DEPOSIT) {
                 player.deposit(event.getVendor(), event.getDescription(), event.getAmount());
             } else {
@@ -143,7 +146,17 @@ public class GameController {
     }
 
     @FXML
-    private void onResetGame(){ System.out.println("Reset clicked"); }
+    private void onResetGame(){
+        player = new Player("Player1", 2100);
+        balanceLabel.setText("Current Balance: $" + player.getBalance());
+        eventLabel.setText("Welcome! \nYou just received your first Year Up stipend.\nSpend it wisely!");
+
+        String startFile = Objects.requireNonNull(getClass().getResource("/images/Dice1.png")).toExternalForm();
+        Image startImage = new Image(startFile);
+        dice1View.setImage(startImage);
+        dice2View.setImage(startImage);
+
+        resultLabel.setVisible(false); }
 
     @FXML
     private void onViewLedger(){ System.out.println("View Ledger clicked"); }

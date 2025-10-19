@@ -16,10 +16,10 @@
    <center>
       <VBox alignment="CENTER" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox fx:id="diceBox" prefHeight="91.0" prefWidth="500.0" VBox.vgrow="SOMETIMES">
+            <HBox fx:id="diceBox" alignment="CENTER" prefHeight="91.0" prefWidth="500.0" VBox.vgrow="SOMETIMES">
                <children>
-                  <ImageView fx:id="dice1View" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="dice2View" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dice1View" fitHeight="154.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dice2View" fitHeight="146.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </HBox>
             <Label fx:id="resultLabel" alignment="CENTER" maxWidth="500" style="-fx-font-size: 8; -fx-text-fill: white; -fx-font-weight: bold;" textAlignment="CENTER" wrapText="true" VBox.vgrow="SOMETIMES" />
@@ -30,13 +30,13 @@
       </VBox>
    </center>
    <right>
-      <VBox fx:id="statsBox" prefWidth="260" alignment="CENTER_RIGHT" spacing="10.0" BorderPane.alignment="CENTER_RIGHT">
+      <VBox fx:id="statsBox" alignment="CENTER_RIGHT" prefWidth="260" spacing="10.0" BorderPane.alignment="CENTER_RIGHT">
          <children>
-            <Label fx:id="eventLabel" wrapText="true" maxWidth="Infinity" text="Label" VBox.vgrow="SOMETIMES">
+            <Label fx:id="eventLabel" maxWidth="Infinity" text="Label" wrapText="true" VBox.vgrow="SOMETIMES">
                <font>
                   <Font size="11.0" />
                </font></Label>
-            <Label fx:id="balanceLabel" text="Label" wrapText="true" maxWidth="Infinity" VBox.vgrow="SOMETIMES">
+            <Label fx:id="balanceLabel" maxWidth="Infinity" text="Label" wrapText="true" VBox.vgrow="SOMETIMES">
                <font>
                   <Font size="9.0" />
                </font></Label>

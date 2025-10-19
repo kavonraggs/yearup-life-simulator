@@ -9,7 +9,7 @@
     { "vendor": "T-Mobile", "description": "Phone bill", "amount": -99, "type": "PAYMENT", "message": "All the talking, texting, and TikToking finally caught up to you." },
     { "vendor": "DoorDash", "description": "Late night cravings", "amount": -36, "type": "PAYMENT", "message": "Could’ve cooked, but nah. Enjoy your $36 nuggets, fries, and a drink." },
     { "vendor": "Cousin Ray", "description": "Loaned money", "amount": -15, "type": "PAYMENT", "message": "Cousin swore he’d pay you back next week… sure." },
-    { "vendor": "Bad Luck", "description": "Lost wallet (⅓ of all cash lost)", "amount": -0.33, "type": "PAYMENT", "message": "You lost your wallet! A chunk of your cash is gone." }
+    { "vendor": "Bad Luck", "description": "Lost wallet", "amount": -150, "type": "PAYMENT", "message": "You lost your wallet! A chunk of your cash is gone." }
   ],
   "neutral": [
     { "vendor": "Target", "description": "Target run", "amount": -35, "type": "PAYMENT", "message": "You went for toothpaste, left with a cart full of candles." },
@@ -31,7 +31,7 @@
     { "vendor": "Grandma", "description": "Secret $100 blessing", "amount": 100, "type": "DEPOSIT", "message": "Grandma secretly slid you a crisp hundred with love." },
     { "vendor": "Year Up Classroom", "description": "Found $40 on floor", "amount": 40, "type": "DEPOSIT", "message": "You found $40 under a desk. Lunch on you!" },
     { "vendor": "Freelance Client", "description": "Logo design", "amount": 200, "type": "DEPOSIT", "message": "Your design hustle paid off big time." },
-    { "vendor": "Sneaker Market", "description": "Sold old sneakers", "amount": 80, "type": "DEPOSIT", "message": "I know you'll miss them but look at all that green!" },
+    { "vendor": "Sneaker Market", "description": "Sold old sneakers", "amount": 80, "type": "DEPOSIT", "message": "I know you'll miss them, but look at all that green!" },
     { "vendor": "Hackathon", "description": "2nd place prize", "amount": 250, "type": "DEPOSIT", "message": "You coded your way to the podium!" },
     { "vendor": "Alumni Event", "description": "Donation from alumni", "amount": 50, "type": "DEPOSIT", "message": "An alum believed in your grind and blessed!" }
   ],

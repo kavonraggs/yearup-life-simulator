@@ -13,7 +13,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("dashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Welcome to Year Up Life Simulator");
+        stage.setTitle("Year Up Life Simulator");
         stage.setScene(scene);
         stage.sizeToScene();
         stage.show();
