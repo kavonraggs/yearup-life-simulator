@@ -7,10 +7,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-
-import java.awt.Color;
-import javax.swing.UIManager;
-import java.awt.Font;
 import javax.swing.*;
 import java.util.Objects;
 import java.util.Random;
@@ -25,8 +21,7 @@ public class GameController {
     private final EventManager manager = new EventManager();
     private LifeEvent event;
 
-    @FXML
-    private Label welcomeText;
+
     @FXML
     private Button rollButton;
     @FXML

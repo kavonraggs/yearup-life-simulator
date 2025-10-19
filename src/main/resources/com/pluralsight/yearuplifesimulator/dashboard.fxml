@@ -14,42 +14,45 @@
       <Label fx:id="titleLabel" text="Life: Year Up Edition" textAlignment="CENTER" BorderPane.alignment="CENTER" />
    </top>
    <center>
-      <VBox alignment="CENTER" spacing="15.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox fx:id="diceBox" alignment="CENTER" prefHeight="91.0" prefWidth="500.0" VBox.vgrow="SOMETIMES">
-               <children>
-                  <ImageView fx:id="dice1View" fitHeight="154.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="dice2View" fitHeight="146.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-               </children>
-            </HBox>
-            <Label fx:id="resultLabel" alignment="CENTER" maxWidth="500" style="-fx-font-size: 8; -fx-text-fill: white; -fx-font-weight: bold;" textAlignment="CENTER" wrapText="true" VBox.vgrow="SOMETIMES" />
-         </children>
-         <padding>
-            <Insets bottom="10.0" top="10.0" />
-         </padding>
-      </VBox>
+       <VBox alignment="CENTER" spacing="15.0" BorderPane.alignment="CENTER">
+           <padding>
+               <Insets bottom="10.0" top="10.0"/>
+           </padding>
+           <HBox fx:id="diceBox" alignment="CENTER" prefHeight="91.0" prefWidth="500.0" VBox.vgrow="SOMETIMES">
+               <ImageView fx:id="dice1View" fitHeight="154.0" fitWidth="200.0" pickOnBounds="true"
+                          preserveRatio="true"/>
+               <ImageView fx:id="dice2View" fitHeight="146.0" fitWidth="200.0" pickOnBounds="true"
+                          preserveRatio="true"/>
+           </HBox>
+           <Label fx:id="resultLabel" alignment="CENTER" maxWidth="500"
+                  style="-fx-font-size: 8; -fx-text-fill: white; -fx-font-weight: bold;" textAlignment="CENTER"
+                  wrapText="true" VBox.vgrow="SOMETIMES"/>
+       </VBox>
    </center>
    <right>
-      <VBox fx:id="statsBox" alignment="CENTER_RIGHT" prefWidth="260" spacing="10.0" BorderPane.alignment="CENTER_RIGHT">
-         <children>
-            <Label fx:id="eventLabel" maxWidth="Infinity" text="Label" wrapText="true" VBox.vgrow="SOMETIMES">
-               <font>
-                  <Font size="11.0" />
-               </font></Label>
-            <Label fx:id="balanceLabel" maxWidth="Infinity" text="Label" wrapText="true" VBox.vgrow="SOMETIMES">
-               <font>
-                  <Font size="9.0" />
-               </font></Label>
-         </children>
-      </VBox>
+       <VBox fx:id="statsBox" alignment="CENTER_RIGHT" prefWidth="260" spacing="10.0"
+             BorderPane.alignment="CENTER_RIGHT">
+           <Label fx:id="eventLabel" maxWidth="Infinity" text="Label" wrapText="true" VBox.vgrow="SOMETIMES">
+              <font>
+                  <Font size="11.0"/>
+              </font>
+           </Label>
+           <Label fx:id="balanceLabel" maxWidth="Infinity" text="Label" wrapText="true" VBox.vgrow="SOMETIMES">
+              <font>
+                  <Font size="9.0"/>
+              </font>
+           </Label>
+       </VBox>
    </right>
    <bottom>
-      <HBox fx:id="buttonBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="rollButton" accessibleText="Roll Dice" mnemonicParsing="false" onAction="#onRollDice" text="Roll Dice" />
-            <Button fx:id="resetButton" accessibleText="Reset Game" mnemonicParsing="false" onAction="#onResetGame" text="Reset Game" />
-            <Button fx:id="ledgerButton" accessibleText="View Ledger" mnemonicParsing="false" onAction="#onViewLedger" text="View Ledger" textAlignment="CENTER" />
-         </children>
-      </HBox>
+       <HBox fx:id="buttonBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0"
+             BorderPane.alignment="CENTER">
+           <Button fx:id="rollButton" accessibleText="Roll Dice" mnemonicParsing="false" onAction="#onRollDice"
+                   text="Roll Dice"/>
+           <Button fx:id="resetButton" accessibleText="Reset Game" mnemonicParsing="false" onAction="#onResetGame"
+                   text="Reset Game"/>
+           <Button fx:id="ledgerButton" accessibleText="View Ledger" mnemonicParsing="false" onAction="#onViewLedger"
+                   text="View Ledger" textAlignment="CENTER"/>
+       </HBox>
    </bottom>
 </BorderPane>
