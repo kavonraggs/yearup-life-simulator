@@ -24,8 +24,8 @@
     { "vendor": "Chipotle", "description": "Dinner on study day", "amount": -20, "type": "PAYMENT", "message": "Study fuel, burrito style." }
   ],
   "good": [
-    { "vendor": "LinkedIn", "description": "Recruiter referral bonus", "amount": 100, "type": "DEPOSIT", "message": "Referral bonus for referring your Year Up friend to a job! Good looks!" },
-    { "vendor": "Parents", "description": "‘Proud of you’ money", "amount": 75, "type": "DEPOSIT", "message": "Your parents sent some cash through Zelle with the message 'Proud of you.'" },
+    { "vendor": "LinkedIn", "description": "Recruiter referral bonus", "amount": 100, "type": "DEPOSIT", "message": "Referral bonus for referring your Year Up friend to a job!" },
+    { "vendor": "Parents", "description": "‘Proud of you’ money", "amount": 75, "type": "DEPOSIT", "message": "Your parents sent some cash through Zelle" },
     { "vendor": "Amazon", "description": "Refund processed", "amount": 76, "type": "DEPOSIT", "message": "That refund finally cleared! Thank ya!" },
     { "vendor": "CashApp", "description": "Payback from friend", "amount": 50, "type": "DEPOSIT", "message": "Your friend actually paid you back! Miracles exist." },
     { "vendor": "Grandma", "description": "Secret $100 blessing", "amount": 100, "type": "DEPOSIT", "message": "Grandma secretly slid you a crisp hundred with love." },

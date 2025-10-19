@@ -60,6 +60,7 @@ public class GameController {
 
     }
 
+    boolean isLucky = false;
     public void handleLuckyRoll(int diceTotal){
         String[] options = {"Over", "Under"};
 
@@ -85,10 +86,12 @@ public class GameController {
         String message;
         if (choice == 0 && newTotal > 6) {
             message = "Where my girls at?! You guessed correctly!";
+            isLucky = true;
             player.deposit(event.getVendor(), event.getDescription(), event.getAmount());
 
         } else if (choice == 1 && newTotal < 7) {
             message = "Where my girls at?! You guessed correctly!";
+            isLucky = true;
             player.deposit(event.getVendor(), event.getDescription(), event.getAmount());
 
         } else {
@@ -126,8 +129,21 @@ public class GameController {
 
 
         if (diceTotal == 7 || diceTotal == 11) {
-            resultLabel.setVisible(true);
-            handleLuckyRoll(diceTotal);
+            eventLabel.setText("Lucky Roll! You rolled " + diceTotal + "!");
+
+            javafx.application.Platform.runLater(() -> {
+                        try {
+                            Thread.sleep(350);
+                        } catch (InterruptedException ignored) {
+                        }
+
+                resultLabel.setVisible(true);
+                handleLuckyRoll(diceTotal);
+                System.out.println(isLucky);
+                if (isLucky){
+                eventLabel.setText(fullMessage);
+                }
+            });
         } else {
             resultLabel.setVisible(false);
             if (event.getType() == LifeEvent.EventType.DEPOSIT) {
